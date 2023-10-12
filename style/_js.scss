@@ -1,0 +1,70 @@
+.ocultar{
+    display: none;
+}
+
+
+
+
+.personajeMain{
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+    margin: 10px;
+
+    &.ocultarPersonaje{
+        display: none;
+    }
+    
+
+    .personaje{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        background-color: #a6a5a5;
+        font-size: 0.8rem;
+        border: 5px solid black;
+        border-radius: 5px;
+        padding: 1rem;
+
+        img{
+            height: 150px;
+            justify-self: center;
+            align-self: center;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    
+}
+
+
+.preguntaDiv{
+    display: grid;
+
+     &.ocultar{
+         display: none;
+     }
+     
+
+ }
+
+
+.dialog-default{
+   &.ocultar{
+    display: none;
+   } 
+
+}
+
+.divDialogo{
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    &.mostrarDivDialogo{
+        display: flex;
+    }
+}
+

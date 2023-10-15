@@ -46,6 +46,10 @@ html, body, pre, code, kbd, samp {
   display: none;
 }
 
+.ocultar2 {
+  display: none;
+}
+
 .personajeMain {
   display: flex;
   justify-content: space-between;

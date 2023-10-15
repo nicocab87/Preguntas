@@ -116,6 +116,7 @@ function personaje (){
     personaje0.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeHombre);
         eleccionPersonaje();
+        preguntar()
           
         
     })
@@ -126,6 +127,7 @@ function personaje (){
     personaje1.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeMujer);
         eleccionPersonaje();
+         preguntar()
 
     })
 
@@ -134,6 +136,7 @@ function personaje (){
     personaje2.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeDinosaurio);
         eleccionPersonaje();
+         preguntar()
 
        
     })
@@ -345,13 +348,16 @@ preguntaSection.innerHTML =`<section id="preguntaSection" class="preguntaSection
 main.appendChild(preguntaSection)
 
 
+
 function preguntar (){
 
-        for (i=0; i<arrayPregunta.length; i+=1){
+        for (i=0; i<  arrayPregunta.length; i+=1){
             preguntaContenedor = document.createElement(`div`)
+            preguntaContenedor.classList.add(`ocultar`)
+            /* preguntaContenedor.classList.add(`ocultar2`) */
             preguntaACtual = arrayPregunta[i]
             preguntaContenedor.innerHTML = `
-            <div id="${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
+            <div id="preg${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
             <p class="title">${preguntaACtual.pregunta}</p>
             <p class="opcionPregunta">Las opciones son: </p>
             <p class="opcionPregunta">${preguntaACtual.opcionA}</p>
@@ -365,8 +371,7 @@ function preguntar (){
 
             preguntaSection.appendChild(preguntaContenedor)
 
-            btnConfirm = document.querySelector(`#btnConfirm-${preguntaACtual.numero}`);
-            dialogo = document.querySelector(`#dialog-default-${preguntaACtual.numero}`);   
+            
  
             btnA = document.querySelector(`#btnA-preg${preguntaACtual.numero}`);
             btnB = document.querySelector(`#btnB-preg${preguntaACtual.numero}`);
@@ -375,15 +380,18 @@ function preguntar (){
             btnA.addEventListener(`click`, () => { 
                 funcionDialogo("a");
                 
+                
              })
              
              btnB.addEventListener(`click`, () => { 
                 funcionDialogo("b"); 
+           
              
              })
         
              btnC.addEventListener(`click`, () => { 
                 funcionDialogo("c");
+    
                     
              })
     
@@ -422,16 +430,53 @@ function preguntar (){
                 preguntaSection.appendChild(divOpcionIncorrecta)
             }
 
+            /* if ( x == preguntaACtual.repuesta){
+                Swal.fire({
+                    title: '<strong>Bien ahi!</strong>',
+                    html:
+                    `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
+                    <form method="dialog">
+                      <p> Acertaste, sos crack</p>
+                    </form>
+                    </div>`,
+                    focusConfirm: false,
+                    confirmButtonText:
+                      '<button class=""nes-btn is-primary"></button> Ok!',
+                    confirmButtonAriaLabel: 'Thumbs up, great!',
+                  })
 
-            btnConfirm = document.querySelector(`#btnConfirm-${preguntaACtual.numero}`);
-            dialogo = document.querySelector(`#dialog-default-${preguntaACtual.numero}`);   
+                agregarPuntos();
+    
+            }else{
+                Swal.fire({
+                    title: '<strong>Incorrecta!</strong>',
+                    html:
+                    `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
+                    <form method="dialog">
+                      <p> Noo mi rey, la pifiaste</p>
+                    </form>
+                    </div>`,
+                    focusConfirm: false,
+                    confirmButtonText:
+                      '<button class=""nes-btn is-primary"></button> Ok!',
+                    confirmButtonAriaLabel: 'Thumbs up, great!',
+                  })
+
+            } */
+
+            btnConfirm = document.querySelector(`#btnConfirm-preg${preguntaACtual.numero}`);
+            dialogo = document.querySelector(`#dialog-default-preg${preguntaACtual.numero}`);
+ 
 
             
             btnConfirm.addEventListener(`click`, () => {
+                console.log(nombre)
                 dialogo.classList.add(`ocultar`)
             }) 
+
+            preguntaContenedor.classList.add(`ocultar2`)
  
-            preguntaContenedor.classList(`ocultar`)
+            
 
             sum();
         } 
@@ -441,7 +486,7 @@ function preguntar (){
 
 }
 
-preguntar()
+
 
 
 

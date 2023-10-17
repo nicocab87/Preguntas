@@ -329,19 +329,181 @@ const arrayPregunta =[
 
     {numero: 3,
     pregunta: "¿Qué es una vacuna?", 
-    opcionA: "b) Un tratamiento médico",
+    opcionA: "a) Un tratamiento médico",
     opcionB: "b) Intravenosa",
     opcionC: "c) Una preparación que estimula el sistema inmunológico",
     repuesta: "c"
+    },
+
+    {numero: 4,
+    pregunta: "¿Cuál es el propósito principal de una vacuna?", 
+    opcionA: "a) Tratar enfermedades",
+    opcionB: "b) Prevenir enfermedades " ,
+    opcionC: "c) Diagnosticar enfermedades",
+    repuesta: "b"
+    },
+
+    {numero: "5",
+        pregunta: "¿Qué es la inmunidad de rebaño?",
+        opcionA: "a) Cuando todos en una comunidad tienen la misma enfermedad",
+        opcionB: "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son",
+        opcionC: "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación",
+        respuesta: "b"
+    },
+    {
+        numero: "6",
+        pregunta: "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?",
+        opcionA: "a) Introducir ARN viral en el cuerpo.",
+        opcionB: "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.",
+        opcionC: "c) Modificar el ADN humano.",
+        respuesta: "b"
+    },
+    {
+        numero: "7",
+        pregunta: "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?",
+        opcionA: "a) Fagocitosis",
+        opcionB: "b) Meiosis",
+        opcionC: "c) Mitosis",
+        respuesta: "c"
+    },
+    {
+        numero: "8",
+        pregunta: "¿Qué tipo de molécula contiene la información genética en las células?",
+        opcionA: "a) Proteínas",
+        opcionB: "b) Carbohidratos",
+        opcionC: "c) Ácido desoxirribonucleico (ADN)",
+        respuesta: "c"
+    },
+    {
+        numero: "9",
+        pregunta: "¿Cuál es la función principal de las enzimas?",
+        opcionA: "a) Transportar oxígeno en la sangre",
+        opcionB: "b) Facilitar reacciones químicas",
+        opcionC: "c) Almacenar energía en las células",
+        respuesta: "b"
+    },
+    {
+        numero: "10",
+        pregunta: "¿Cuál es la unidad básica de la herencia en los seres vivos?",
+        opcionA: "a) Aminoácido",
+        opcionB: "b) Gen",
+        opcionC: "c) Célula",
+        respuesta: "b"
+    },
+    {
+        numero: "11",
+        pregunta: "¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?",
+        opcionA: "a) Retrovirus",
+        opcionB: "b) Adenovirus",
+        opcionC: "c) Herpesvirus",
+        respuesta: "a"
+    },
+    {
+        numero: "12",
+        pregunta: "¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?",
+        opcionA: "a) ARN ribosómico (ARNr)",
+        opcionB: "b) ARN de transferencia (ARNt)",
+        opcionC: "c) ARN mensajero (ARNm)",
+        respuesta: "c"
+    },
+    {
+        numero: "13",
+        pregunta: "¿Cuál es la función de las células B en el sistema inmunitario?",
+        opcionA: "a) Producir anticuerpos",
+        opcionB: "b) Fagocitar patógenos",
+        opcionC: "c) Transportar oxígeno en la sangre",
+        respuesta: "a"
+    },
+    {
+        numero: "14",
+        pregunta: "¿Cuál es la función principal de las células T en el sistema inmunológico?",
+        opcionA: "a) Producir anticuerpos.",
+        opcionB: "b) Destruir células infectadas por patógenos.",
+        opcionC: "c) Filtrar la sangre.",
+        respuesta: "b"
+    },
+    {
+        numero: "15",
+        pregunta: "¿Cuál es el propósito de una vacuna de refuerzo?",
+        opcionA: "a) Estimular la respuesta inmunológica inicial.",
+        opcionB: "b) Mantener alta la inmunidad a largo plazo.",
+        opcionC: "c) Tratar las infecciones activas.",
+        respuesta: "b"
+    },
+    {
+        numero: "16",
+        pregunta: "¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?",
+        opcionA: "a) Transcripción",
+        opcionB: "b) Traducción",
+        opcionC: "c) Replicación",
+        respuesta: "b"
+    },
+    {
+        numero: "17",
+        pregunta: "¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?",
+        opcionA: "a) ARN ribosómico (ARNr)",
+        opcionB: "b) ARN mensajero (ARNm)",
+        opcionC: "c) ARN de transferencia (tARN)",
+        respuesta: "b"
+    },
+    {
+        numero: "18",
+        pregunta: "¿Cuál es el objetivo de un adyuvante en una vacuna?",
+        opcionA: "a) Prevenir reacciones alérgicas",
+        opcionB: "b) Potenciar la respuesta inmunitaria",
+        opcionC: "c) Reducir la eficacia de la vacuna",
+        respuesta: "b"
+    },
+    {
+        numero: "19",
+        pregunta: "¿Qué función tienen los anticuerpos en el sistema inmunitario?",
+        opcionA: "a) Transportar oxígeno en la sangre",
+        opcionB: "b) Eliminar patógenos y toxinas",
+        opcionC: "c) Digerir alimentos",
+        respuesta: "b"
+    },
+
+    {
+        numero: "20",
+        pregunta: "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?",
+        opcionA: "a) Una técnica para amplificar y detectar material genético.",
+        opcionB: "b) Un tipo de vacuna.",
+        opcionC: "c) Una técnica para purificar proteínas.",
+        respuesta: "a"
     }
+
 ]
+
+function pushearObjeto(num, preguntas, A, B,C,rta ){
+    this.numero=num
+    this.pregunta = preguntas
+    this.opcionA= A
+    this.opcionB = B
+    this.opcionC= C
+    this.repuesta=rta
+    arrayPregunta.push (pushearObjeto)
+}
+
+pushearObjeto ("5", "¿Qué es la inmunidad de rebaño?", "a) Cuando todos en una comunidad tienen la misma enfermedad", "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son", "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación", "b")
+pushearObjeto("6", "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?", "a) Introducir ARN viral en el cuerpo.", "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.", "c) Modificar el ADN humano.", "b")
+pushearObjeto("7", "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?", "a) Fagocitosis", "b) Meiosis", "c) Mitosis", "c")
+pushearObjeto("8", "¿Qué tipo de molécula contiene la información genética en las células?", "a) Proteínas", "b) Carbohidratos", "c) Ácido desoxirribonucleico (ADN)", "c")
+pushearObjeto("9","¿Cuál es la función principal de las enzimas?", "a) Transportar oxígeno en la sangre", "b) Facilitar reacciones químicas", "c) Almacenar energía en las células", "b")
+pushearObjeto("10", "¿Cuál es la unidad básica de la herencia en los seres vivos?", "a) Aminoácido", "b) Gen", "c) Célula", "b")
+pushearObjeto("11", "¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?", "a) Retrovirus", "b) Adenovirus", "c) Herpesvirus", "a")
+pushearObjeto("12", "¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?", "a) ARN ribosómico (ARNr)", "b) ARN de trasnferencia (ARNt)", "c) ARN mensajero (ARNm)", "c")
+pushearObjeto("13", "¿Cuál es la función de las células B en el sistema inmunitario?", "a) Producir anticuerpos", "b) Fagocitar patógenos", "c) Transportar oxígeno en la sangre", "a")
+pushearObjeto("14", "¿Cuál es la función principal de las células T en el sistema inmunológico?", "a) Producir anticuerpos.", "b) Destruir células infectadas por patógenos.", "c) Filtrar la sangre.", "b")
+pushearObjeto("15", "¿Cuál es el propósito de una vacuna de refuerzo?", "a) Estimular la respuesta inmunológica inicial.", "b) Mantener alta la inmunidad a largo plazo.", "c) Tratar las infecciones activas.", "b")
+pushearObjeto("16", "¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?", "a) Transcripción", "b) Traducción", "c) Replicación", "b")
+pushearObjeto("17", "¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?", "a) ARN ribosómico (ARNr)", "b) ARN mensajero (ARNm)", "c) ARN de transferencia (tARN)", "b")
+pushearObjeto("18", "¿Cuál es el objetivo de un adyuvante en una vacuna?", "a) Prevenir reacciones alérgicas", "b) Potenciar la respuesta inmunitaria", "c) Reducir la eficacia de la vacuna", "b")
+pushearObjeto("19", "¿Qué función tienen los anticuerpos en el sistema inmunitario?", "a) Transportar oxígeno en la sangre", "b) Eliminar patógenos y toxinas", "c) Digerir alimentos", "b")
+pushearObjeto("20", "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?", "a) Una técnica para amplificar y detectar material genético.", "b) Un tipo de vacuna.", "c) Una técnica para purificar proteínas.", "a")
+
 
 let preguntaACtual
 let preguntaContenedor
-
-let btnConfirm
-let dialogo 
-let clase
 
 let preguntaSection = document.createElement (`section`);
 preguntaSection.innerHTML =`<section id="preguntaSection" class="preguntaSection"> </section>`
@@ -406,36 +568,6 @@ async function preguntar (){
         }
 
         function funcionDialogo (x){
-            /* if ( x === preguntaACtual.repuesta){
-                let divOpcionCorrecta = document.createElement(`div`);
-                divOpcionCorrecta.innerHTML =`
-                <div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}">
-                    <form method="dialog">
-                      <p>Bien ahi! acertaste!</p>
-                      <menu class="dialog-menu">
-                        <button id= "btnConfirm-preg${preguntaACtual.numero}" class="nes-btn is-primary">Confirm</button>
-                      </menu>
-                    </form>
-                </div>`
-    
-                preguntaSection.appendChild(divOpcionCorrecta)
-                
-    
-                agregarPuntos();
-    
-            }else{
-                let divOpcionIncorrecta = document.createElement(`div`);
-                divOpcionIncorrecta.innerHTML =`
-                <div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
-                    <form method="dialog">
-                      <p>Alert: Nooo mi rey, no era esa</p>
-                      <menu class="dialog-menu">
-                        <button id= "btnConfirm-preg${preguntaACtual.numero}" class="nes-btn is-primary">Confirm</button>
-                      </menu>
-                    </form>
-                </div>`
-                preguntaSection.appendChild(divOpcionIncorrecta) }*/
-            
 
             if ( x == preguntaACtual.repuesta){
                 Swal.fire({
@@ -482,80 +614,17 @@ async function preguntar (){
             }) 
 
             preguntaContenedor.classList.add(`ocultar2`)
- 
-            
-
             sum();
         } 
  
-
-
-
 }
 
 
 
 
 
-/* preguntar (   "preg1" )
-preguntar (    "preg2")
-preguntar (     "preg3") */
-/* preguntar ("¿Cuál es el propósito principal de una vacuna?", "a) Tratar enfermedades", "b) Prevenir enfermedades " , "c) Diagnosticar enfermedades", "b", "preg4") */
-
-// Linea de juego
 
 
-
-
-
-
-/*
-console.log(`Parece que a mucha gente le genera desconfianza la vacuna, ya que se generó una gran ola de desinformación y fake news en internet, podrás ayudar a aclarar sus dudas?`)
-console.log(`1) Si
-2) No (en este caso podrías perder puntos por no responder)`)
-
-let rtaSegundaInstancia = prompt (`Ingrese su repuesta aqui!(responder con 1 o 2)`)
-
-if(rtaSegundaInstancia == 1){
-    preg5= preguntar ("¿Qué es la inmunidad de rebaño?", "a) Cuando todos en una comunidad tienen la misma enfermedad", "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son", "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación", "b")
-    preg6= preguntar ("¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?", "a) Introducir ARN viral en el cuerpo.", "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.", "c) Modificar el ADN humano.", "b")
-}else{
-    console.log(`Otro compañero del CONICET ha salido en un medio televisivo y ha aclarado todas las dudas`)
-}
-
-console.log (`Estas un poco nervioso, ya que tenes una gran responsabilidad encima. Asi que volviste a agarrar esos viejos apuntes sobre biología molecular para repasar`)
-
-preg7= preguntar ("¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?", "a) Fagocitosis", "b) Meiosis", "c) Mitosis", "c")
-preg7= preguntar ("¿Qué tipo de molécula contiene la información genética en las células?", "a) Proteínas", "b) Carbohidratos", "c) Ácido desoxirribonucleico (ADN)", "c")
-preg9= preguntar ("¿Cuál es la función principal de las enzimas?", "a) Transportar oxígeno en la sangre", "b) Facilitar reacciones químicas", "c) Almacenar energía en las células", "b")
-preg10= preguntar ("¿Cuál es la unidad básica de la herencia en los seres vivos?", "a) Aminoácido", "b) Gen", "c) Célula", "b")
-
-if ( 15<= puntos ){
-    console.log(`Felicitaciones, ${nombre}. Vienes muy bien! Ahora viene la parte mas dificil... la creación de la vacuna!`)
-
-    preg11= preguntar ("¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?", "a) Retrovirus", "b) Adenovirus", "c) Herpesvirus", "a")
-    preg12= preguntar ("¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?", "a) ARN ribosómico (ARNr)", "b) ARN de trasnferencia (ARNt)", "c) ARN mensajero (ARNm)", "c")
-}else{
-    console.log(`La verdad que estuvimos un poco flojos, el laboratorio cerró por cuarentena y nos costó mas de lo que creimos, pero capaz ahora podemos remontar.`)
-    preg13= preguntar ("¿Cuál es la función de las células B en el sistema inmunitario?", "a) Producir anticuerpos", "b) Fagocitar patógenos", "c) Transportar oxígeno en la sangre", "a")
-    preg14= preguntar ("¿Cuál es la función principal de las células T en el sistema inmunológico?", "a) Producir anticuerpos.", "b) Destruir células infectadas por patógenos.", "c) Filtrar la sangre.", "b")
-}
-
-alert(`URGENTE! Una vez lograda la vacuna, la gente tiene miedo de sacar turno, podrás ayudar a concientizar?`)
-
-preg15= preguntar (" ¿Cuál es el propósito de una vacuna de refuerzo?", "a) Estimular la respuesta inmunológica inicial.", "b) Mantener alta la inmunidad a largo plazo.", "c) Tratar las infecciones activas.", "b")
-
- */
-
-
-
-/*
- preg16= preguntar ("¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?", "a) Transcripción", "b) Traducción", "c) Replicación", "b")
-preg17= preguntar ("¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?", "a) ARN ribosómico (ARNr)", "b) ARN mensajero (ARNm)", "c) ARN de transferencia (tARN)", "b")
-preg18= preguntar ("¿Cuál es el objetivo de un adyuvante en una vacuna?", "a) Prevenir reacciones alérgicas", "b) Potenciar la respuesta inmunitaria", "c) Reducir la eficacia de la vacuna", "b")
-preg19= preguntar ("¿Qué función tienen los anticuerpos en el sistema inmunitario?", "a) Transportar oxígeno en la sangre", "b) Eliminar patógenos y toxinas", "c) Digerir alimentos", "b")
-preg20= preguntar ("¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?", "a) Una técnica para amplificar y detectar material genético.", "b) Un tipo de vacuna.", "c) Una técnica para purificar proteínas.", "a")
-*/
 
 
 

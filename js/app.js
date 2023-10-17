@@ -348,13 +348,10 @@ preguntaSection.innerHTML =`<section id="preguntaSection" class="preguntaSection
 main.appendChild(preguntaSection)
 
 
-
-function preguntar (){
+async function preguntar (){
 
         for (i=0; i<  arrayPregunta.length; i+=1){
             preguntaContenedor = document.createElement(`div`)
-            preguntaContenedor.classList.add(`ocultar`)
-            /* preguntaContenedor.classList.add(`ocultar2`) */
             preguntaACtual = arrayPregunta[i]
             preguntaContenedor.innerHTML = `
             <div id="preg${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
@@ -378,28 +375,38 @@ function preguntar (){
             btnC = document.querySelector(`#btnC-preg${preguntaACtual.numero}`);
     
             btnA.addEventListener(`click`, () => { 
-                funcionDialogo("a");
-                
-                
+                funcionDialogo("a"); 
              })
              
              btnB.addEventListener(`click`, () => { 
                 funcionDialogo("b"); 
-           
-             
              })
         
              btnC.addEventListener(`click`, () => { 
                 funcionDialogo("c");
-    
-                    
+
              })
-    
+             
+            await esperarFuncion();
+
+            function esperarFuncion() {
+                 return new Promise((resolve) => {
+                btnB.addEventListener("click", () => {
+                   resolve()
+                    preguntaContenedor.classList.add(`ocultar2`)})
+                btnA.addEventListener("click", () => {
+                   resolve()
+                    preguntaContenedor.classList.add(`ocultar2`)})
+                btnC.addEventListener("click", () => {
+                   resolve()
+                    preguntaContenedor.classList.add(`ocultar2`)});
+                 });
+}
    
         }
 
         function funcionDialogo (x){
-            if ( x === preguntaACtual.repuesta){
+            /* if ( x === preguntaACtual.repuesta){
                 let divOpcionCorrecta = document.createElement(`div`);
                 divOpcionCorrecta.innerHTML =`
                 <div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}">
@@ -427,10 +434,10 @@ function preguntar (){
                       </menu>
                     </form>
                 </div>`
-                preguntaSection.appendChild(divOpcionIncorrecta)
-            }
+                preguntaSection.appendChild(divOpcionIncorrecta) }*/
+            
 
-            /* if ( x == preguntaACtual.repuesta){
+            if ( x == preguntaACtual.repuesta){
                 Swal.fire({
                     title: '<strong>Bien ahi!</strong>',
                     html:
@@ -441,7 +448,7 @@ function preguntar (){
                     </div>`,
                     focusConfirm: false,
                     confirmButtonText:
-                      '<button class=""nes-btn is-primary"></button> Ok!',
+                      '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!',
                     confirmButtonAriaLabel: 'Thumbs up, great!',
                   })
 
@@ -458,11 +465,11 @@ function preguntar (){
                     </div>`,
                     focusConfirm: false,
                     confirmButtonText:
-                      '<button class=""nes-btn is-primary"></button> Ok!',
+                      '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!',
                     confirmButtonAriaLabel: 'Thumbs up, great!',
                   })
 
-            } */
+            }
 
             btnConfirm = document.querySelector(`#btnConfirm-preg${preguntaACtual.numero}`);
             dialogo = document.querySelector(`#dialog-default-preg${preguntaACtual.numero}`);

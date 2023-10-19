@@ -50,6 +50,10 @@ html, body, pre, code, kbd, samp {
   display: none;
 }
 
+.scale-up-hor-center {
+  animation: scale-up-hor-center 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 .personajeMain {
   display: flex;
   justify-content: space-between;

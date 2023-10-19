@@ -256,54 +256,7 @@ function preguntados ( pregunta, op1, op2, op3, rta, pregX) {
      })
  */
     
-    
 
-
-let vPreg1
-let vPreg2
-let vPreg3
-let vPreg4
-let vPreg5
-let vPreg6
-let vPreg7
-let vPreg8
-let vPreg9
-let vPreg10
-let vPreg11
-let vPreg12
-let vPreg13
-let vPreg14
-let vPreg15
-let vPreg16
-let vPreg17
-let vPreg18
-let vPreg19
-let vPreg20
-
-
-let arrayVariables = [
-
-vPreg1= document.querySelector(`#preg1`)  ,     
-vPreg2= document.querySelector(`#preg2`)  ,     
-vPreg3= document.querySelector(`#preg3`)  ,     
-vPreg4= document.querySelector(`#preg4`)  ,     
-vPreg5= document.querySelector(`#preg5`)  ,     
-vPreg6= document.querySelector(`#preg6`)  ,     
-vPreg7= document.querySelector(`#preg7`)  ,     
-vPreg8= document.querySelector(`#preg8`)  ,     
-vPreg9= document.querySelector(`#preg9`)  ,     
-vPreg10= document.querySelector(`#preg10`),
-vPreg11= document.querySelector(`#preg11`),
-vPreg12= document.querySelector(`#preg12`),
-vPreg13= document.querySelector(`#preg13`),
-vPreg14= document.querySelector(`#preg14`),
-vPreg15= document.querySelector(`#preg15`),
-vPreg16= document.querySelector(`#preg16`),
-vPreg17= document.querySelector(`#preg17`),
-vPreg18= document.querySelector(`#preg18`),
-vPreg19= document.querySelector(`#preg19`),
-vPreg20= document.querySelector(`#preg20`)
-] 
 
 /* Array de pregunta de funciomes */
 let btnA
@@ -343,20 +296,21 @@ const arrayPregunta =[
     repuesta: "b"
     },
 
-    {numero: "5",
-        pregunta: "¿Qué es la inmunidad de rebaño?",
-        opcionA: "a) Cuando todos en una comunidad tienen la misma enfermedad",
-        opcionB: "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son",
-        opcionC: "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación",
-        respuesta: "b"
+    {numero: 5,
+    pregunta: "¿Qué es la inmunidad de rebaño?",
+    opcionA: "a) Cuando todos en una comunidad tienen la misma enfermedad",
+    opcionB: "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son",
+    opcionC: "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación",
+    repuesta: "b"
     },
+
     {
-        numero: "6",
+        numero: 6,
         pregunta: "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?",
         opcionA: "a) Introducir ARN viral en el cuerpo.",
         opcionB: "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.",
         opcionC: "c) Modificar el ADN humano.",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "7",
@@ -364,7 +318,7 @@ const arrayPregunta =[
         opcionA: "a) Fagocitosis",
         opcionB: "b) Meiosis",
         opcionC: "c) Mitosis",
-        respuesta: "c"
+        repuesta: "c"
     },
     {
         numero: "8",
@@ -372,7 +326,7 @@ const arrayPregunta =[
         opcionA: "a) Proteínas",
         opcionB: "b) Carbohidratos",
         opcionC: "c) Ácido desoxirribonucleico (ADN)",
-        respuesta: "c"
+        repuesta: "c"
     },
     {
         numero: "9",
@@ -380,7 +334,7 @@ const arrayPregunta =[
         opcionA: "a) Transportar oxígeno en la sangre",
         opcionB: "b) Facilitar reacciones químicas",
         opcionC: "c) Almacenar energía en las células",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "10",
@@ -388,7 +342,7 @@ const arrayPregunta =[
         opcionA: "a) Aminoácido",
         opcionB: "b) Gen",
         opcionC: "c) Célula",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "11",
@@ -396,7 +350,7 @@ const arrayPregunta =[
         opcionA: "a) Retrovirus",
         opcionB: "b) Adenovirus",
         opcionC: "c) Herpesvirus",
-        respuesta: "a"
+        repuesta: "a"
     },
     {
         numero: "12",
@@ -404,7 +358,7 @@ const arrayPregunta =[
         opcionA: "a) ARN ribosómico (ARNr)",
         opcionB: "b) ARN de transferencia (ARNt)",
         opcionC: "c) ARN mensajero (ARNm)",
-        respuesta: "c"
+        repuesta: "c"
     },
     {
         numero: "13",
@@ -412,7 +366,7 @@ const arrayPregunta =[
         opcionA: "a) Producir anticuerpos",
         opcionB: "b) Fagocitar patógenos",
         opcionC: "c) Transportar oxígeno en la sangre",
-        respuesta: "a"
+        repuesta: "a"
     },
     {
         numero: "14",
@@ -420,7 +374,7 @@ const arrayPregunta =[
         opcionA: "a) Producir anticuerpos.",
         opcionB: "b) Destruir células infectadas por patógenos.",
         opcionC: "c) Filtrar la sangre.",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "15",
@@ -428,7 +382,7 @@ const arrayPregunta =[
         opcionA: "a) Estimular la respuesta inmunológica inicial.",
         opcionB: "b) Mantener alta la inmunidad a largo plazo.",
         opcionC: "c) Tratar las infecciones activas.",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "16",
@@ -436,7 +390,7 @@ const arrayPregunta =[
         opcionA: "a) Transcripción",
         opcionB: "b) Traducción",
         opcionC: "c) Replicación",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "17",
@@ -444,7 +398,7 @@ const arrayPregunta =[
         opcionA: "a) ARN ribosómico (ARNr)",
         opcionB: "b) ARN mensajero (ARNm)",
         opcionC: "c) ARN de transferencia (tARN)",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "18",
@@ -452,7 +406,7 @@ const arrayPregunta =[
         opcionA: "a) Prevenir reacciones alérgicas",
         opcionB: "b) Potenciar la respuesta inmunitaria",
         opcionC: "c) Reducir la eficacia de la vacuna",
-        respuesta: "b"
+        repuesta: "b"
     },
     {
         numero: "19",
@@ -460,7 +414,7 @@ const arrayPregunta =[
         opcionA: "a) Transportar oxígeno en la sangre",
         opcionB: "b) Eliminar patógenos y toxinas",
         opcionC: "c) Digerir alimentos",
-        respuesta: "b"
+        repuesta: "b"
     },
 
     {
@@ -469,7 +423,7 @@ const arrayPregunta =[
         opcionA: "a) Una técnica para amplificar y detectar material genético.",
         opcionB: "b) Un tipo de vacuna.",
         opcionC: "c) Una técnica para purificar proteínas.",
-        respuesta: "a"
+        repuesta: "a"
     }
 
 ]
@@ -484,7 +438,7 @@ function pushearObjeto(num, preguntas, A, B,C,rta ){
     arrayPregunta.push (pushearObjeto)
 }
 
-pushearObjeto ("5", "¿Qué es la inmunidad de rebaño?", "a) Cuando todos en una comunidad tienen la misma enfermedad", "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son", "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación", "b")
+/* pushearObjeto ("5", "¿Qué es la inmunidad de rebaño?", "a) Cuando todos en una comunidad tienen la misma enfermedad", "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son", "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación", "b")
 pushearObjeto("6", "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?", "a) Introducir ARN viral en el cuerpo.", "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.", "c) Modificar el ADN humano.", "b")
 pushearObjeto("7", "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?", "a) Fagocitosis", "b) Meiosis", "c) Mitosis", "c")
 pushearObjeto("8", "¿Qué tipo de molécula contiene la información genética en las células?", "a) Proteínas", "b) Carbohidratos", "c) Ácido desoxirribonucleico (ADN)", "c")
@@ -500,7 +454,7 @@ pushearObjeto("17", "¿Qué tipo de ARN lleva la información genética de un ge
 pushearObjeto("18", "¿Cuál es el objetivo de un adyuvante en una vacuna?", "a) Prevenir reacciones alérgicas", "b) Potenciar la respuesta inmunitaria", "c) Reducir la eficacia de la vacuna", "b")
 pushearObjeto("19", "¿Qué función tienen los anticuerpos en el sistema inmunitario?", "a) Transportar oxígeno en la sangre", "b) Eliminar patógenos y toxinas", "c) Digerir alimentos", "b")
 pushearObjeto("20", "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?", "a) Una técnica para amplificar y detectar material genético.", "b) Un tipo de vacuna.", "c) Una técnica para purificar proteínas.", "a")
-
+ */
 
 let preguntaACtual
 let preguntaContenedor
@@ -514,6 +468,7 @@ async function preguntar (){
 
         for (i=0; i<  arrayPregunta.length; i+=1){
             preguntaContenedor = document.createElement(`div`)
+            preguntaContenedor.classList.add(`scale-up-hor-center`)
             preguntaACtual = arrayPregunta[i]
             preguntaContenedor.innerHTML = `
             <div id="preg${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
@@ -562,8 +517,9 @@ async function preguntar (){
                 btnC.addEventListener("click", () => {
                    resolve()
                     preguntaContenedor.classList.add(`ocultar2`)});
-                 });
-}
+                 })}
+
+            
    
         }
 
@@ -597,26 +553,30 @@ async function preguntar (){
                     </div>`,
                     focusConfirm: false,
                     confirmButtonText:
-                      '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!',
-                    confirmButtonAriaLabel: 'Thumbs up, great!',
+                      '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!'
                   })
 
             }
 
             btnConfirm = document.querySelector(`#btnConfirm-preg${preguntaACtual.numero}`);
             dialogo = document.querySelector(`#dialog-default-preg${preguntaACtual.numero}`);
- 
+            preguntaContenedor.classList.add(`ocultar`)
+            sum()
 
-            
-            btnConfirm.addEventListener(`click`, () => {
-                console.log(nombre)
-                dialogo.classList.add(`ocultar`)
-            }) 
+            if(numPreg==arrayPregunta.length){
 
-            preguntaContenedor.classList.add(`ocultar2`)
-            sum();
+                let divFinal = document.createElement(`div`)
+                divFinal.innerHTML= `
+                <div class="nes-container is-rounded">
+                <p>${nombre} has llegado añ final! tu puntuación fue: ${puntos}</p>
+                </div>`
+                preguntaSection.appendChild(divFinal)
+                
+            }
         } 
- 
+        
+
+
 }
 
 

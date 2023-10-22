@@ -22,6 +22,7 @@ let puntos = 0;
 
 function agregarPuntos(){
 puntos+=3
+actualizarPuntuacion()
 }
 
 let numPreg = 0
@@ -29,6 +30,10 @@ function sum(){
     numPreg+=1
 }
 
+function actualizarPuntuacion() {
+    const puntuacionDiv = document.querySelector(".puntaje");
+    puntuacionDiv.innerHTML = `${nombre} ${personajeElegido.img} Puntos: ${puntos}`;
+  }
 
 
 
@@ -89,6 +94,7 @@ function personaje (){
         let item = personajes[i]
 
         const itemDiv= document.createElement (`div`)
+        
         const imgElement = document.createElement(`img`);
         imgElement.src = item.img;
 
@@ -108,7 +114,10 @@ function personaje (){
 
 
     }
- 
+
+   
+    
+    
 
 
 
@@ -116,7 +125,8 @@ function personaje (){
     personaje0.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeHombre);
         eleccionPersonaje();
-        preguntar()
+        preguntar();
+
           
         
     })
@@ -127,7 +137,8 @@ function personaje (){
     personaje1.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeMujer);
         eleccionPersonaje();
-         preguntar()
+         preguntar();
+  
 
     })
 
@@ -136,7 +147,8 @@ function personaje (){
     personaje2.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeDinosaurio);
         eleccionPersonaje();
-         preguntar()
+         preguntar();
+         
 
        
     })
@@ -145,7 +157,16 @@ function personaje (){
 const eleccionPersonaje = function (){
     personajeMain.classList.add(`ocultarPersonaje`)
     console.log(personajeElegido)
-    nombre = personajeElegido[0].nombre;  
+    nombre = personajeElegido[0].nombre; 
+
+    let imgElegida= document.createElement(`img`);
+    imgElegida.src = personajeElegido[0].img;
+    imgElegida.classList.add(`img`)
+
+    let divPuntaje = document.createElement(`div`)
+    divPuntaje.innerHTML = `<div class="puntaje"> ${nombre} Puntos: ${puntos} </div>`
+    main.appendChild(divPuntaje)
+    divPuntaje.appendChild(imgElegida)
 
 }
 
@@ -157,105 +178,6 @@ btnEnviar.addEventListener("click", (e) => {
     personajeMain.classList.remove("ocultarPersonaje")
     personaje()
 });
-
-
-
-// Esta era la forma que habia intentado hacer que la function preguntas se ejecutara, pero me daba errores, asi que lo intente resolver de la forma que se obserba mas abajo
-
-
-// Juego
-
-/* let divPregunta = document.querySelector(`#preguntaDiv`) */
-
-/* 
-const preguntaDiv = document.createElement(`div`);
-
-function preguntados ( pregunta, op1, op2, op3, rta, pregX) {
-
-    preguntaDiv.innerHTML = `
-<div id="${pregX}" class="nes-container with-title is-centered preguntaDiv ocultar">
-  <p class="title">${pregunta}</p>
-  <p class="opcionPregunta">Las opciones son: </p>
-  <p class="opcionPregunta">${op1}</p>
-  <p class="opcionPregunta">${op2}</p>
-  <p class="opcionPregunta">${op3}</p>
-  <a class="nes-btn" id="btnA-${pregX}" href="#">Opcion A</a>
-  <a class="nes-btn" id="btnB-${pregX}" href="#">Opcion B</a>
-  <a class="nes-btn" id="btnC-${pregX}" href="#">Opcion C</a>
-</div>`
-
-    
-    preguntaSection.appendChild(preguntaDiv);
- */
-    
-    
-    
-
-/*     let btnConfirm = document.querySelector(`#btnConfirm-${pregX}`);
-    let dialogo = document.querySelector(`#dialog-default-${pregX}`); */ 
-
-/* 
-    function funcionDialogo (x){
-        if ( x === rta){
-            let divOpcionCorrecta = document.createElement(`div`);
-            divOpcionCorrecta.innerHTML =`
-            <div class="nes-dialog" id="dialog-default-${pregX}">
-                <form method="dialog">
-                  <p>Bien ahi! acertaste!</p>
-                  <menu class="dialog-menu">
-                    <button id= "btnConfirm-${pregX}" class="nes-btn is-primary">Confirm</button>
-                  </menu>
-                </form>
-            </div>`
-
-            preguntaSection.appendChild(divOpcionCorrecta)
-            
-
-            agregarPuntos();
-
-        }else{
-            let divOpcionIncorrecta = document.createElement(`div`);
-            divOpcionIncorrecta.innerHTML =`
-            <div class="nes-dialog" id="dialog-default-${pregX}">
-                <form method="dialog">
-                  <p>Alert: Nooo mi rey, no era esa</p>
-                  <menu class="dialog-menu">
-                    <button id= "btnConfirm-${pregX}" class="nes-btn is-primary">Confirm</button>
-                  </menu>
-                </form>
-            </div>`
-            preguntaSection.appendChild(divOpcionIncorrecta)
-        }
-
-
-        let btnConfirm = document.querySelector(`#btnConfirm-${pregX}`);
-        let dialogo = document.querySelector(`#dialog-default-${pregX}`); 
-
-        btnConfirm.addEventListener(`click`, () => {
-    
-            dialogo.classList.add(`ocultar`)
-        })
-
-        preguntaDiv.classList.add("ocultar")
-        sum();
-    }
- 
-    btnA.addEventListener(`click`, () => { 
-        funcionDialogo("a");
-        
-     })
-     
-     btnB.addEventListener(`click`, () => { 
-        funcionDialogo("b"); 
-        
-     })
-
-     btnC.addEventListener(`click`, () => { 
-        funcionDialogo("c");
-    
-     })
- */
-    
 
 
 /* Array de pregunta de funciomes */
@@ -313,7 +235,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "7",
+        numero: 7,
         pregunta: "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?",
         opcionA: "a) Fagocitosis",
         opcionB: "b) Meiosis",
@@ -321,7 +243,7 @@ const arrayPregunta =[
         repuesta: "c"
     },
     {
-        numero: "8",
+        numero: 8,
         pregunta: "¿Qué tipo de molécula contiene la información genética en las células?",
         opcionA: "a) Proteínas",
         opcionB: "b) Carbohidratos",
@@ -329,7 +251,7 @@ const arrayPregunta =[
         repuesta: "c"
     },
     {
-        numero: "9",
+        numero: 9,
         pregunta: "¿Cuál es la función principal de las enzimas?",
         opcionA: "a) Transportar oxígeno en la sangre",
         opcionB: "b) Facilitar reacciones químicas",
@@ -337,7 +259,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "10",
+        numero: 10,
         pregunta: "¿Cuál es la unidad básica de la herencia en los seres vivos?",
         opcionA: "a) Aminoácido",
         opcionB: "b) Gen",
@@ -345,7 +267,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "11",
+        numero: 11,
         pregunta: "¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?",
         opcionA: "a) Retrovirus",
         opcionB: "b) Adenovirus",
@@ -353,7 +275,7 @@ const arrayPregunta =[
         repuesta: "a"
     },
     {
-        numero: "12",
+        numero: 12,
         pregunta: "¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?",
         opcionA: "a) ARN ribosómico (ARNr)",
         opcionB: "b) ARN de transferencia (ARNt)",
@@ -361,7 +283,7 @@ const arrayPregunta =[
         repuesta: "c"
     },
     {
-        numero: "13",
+        numero: 13,
         pregunta: "¿Cuál es la función de las células B en el sistema inmunitario?",
         opcionA: "a) Producir anticuerpos",
         opcionB: "b) Fagocitar patógenos",
@@ -369,7 +291,7 @@ const arrayPregunta =[
         repuesta: "a"
     },
     {
-        numero: "14",
+        numero: 14,
         pregunta: "¿Cuál es la función principal de las células T en el sistema inmunológico?",
         opcionA: "a) Producir anticuerpos.",
         opcionB: "b) Destruir células infectadas por patógenos.",
@@ -377,7 +299,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "15",
+        numero: 15,
         pregunta: "¿Cuál es el propósito de una vacuna de refuerzo?",
         opcionA: "a) Estimular la respuesta inmunológica inicial.",
         opcionB: "b) Mantener alta la inmunidad a largo plazo.",
@@ -385,7 +307,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "16",
+        numero: 16,
         pregunta: "¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?",
         opcionA: "a) Transcripción",
         opcionB: "b) Traducción",
@@ -393,7 +315,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "17",
+        numero: 17,
         pregunta: "¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?",
         opcionA: "a) ARN ribosómico (ARNr)",
         opcionB: "b) ARN mensajero (ARNm)",
@@ -401,7 +323,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "18",
+        numero: 18,
         pregunta: "¿Cuál es el objetivo de un adyuvante en una vacuna?",
         opcionA: "a) Prevenir reacciones alérgicas",
         opcionB: "b) Potenciar la respuesta inmunitaria",
@@ -409,7 +331,7 @@ const arrayPregunta =[
         repuesta: "b"
     },
     {
-        numero: "19",
+        numero: 19,
         pregunta: "¿Qué función tienen los anticuerpos en el sistema inmunitario?",
         opcionA: "a) Transportar oxígeno en la sangre",
         opcionB: "b) Eliminar patógenos y toxinas",
@@ -418,7 +340,7 @@ const arrayPregunta =[
     },
 
     {
-        numero: "20",
+        numero: 20,
         pregunta: "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?",
         opcionA: "a) Una técnica para amplificar y detectar material genético.",
         opcionB: "b) Un tipo de vacuna.",
@@ -468,7 +390,7 @@ async function preguntar (){
 
         for (i=0; i<  arrayPregunta.length; i+=1){
             preguntaContenedor = document.createElement(`div`)
-            preguntaContenedor.classList.add(`scale-up-hor-center`)
+            preguntaContenedor.classList.add(`scale-in-hor-center`)
             preguntaACtual = arrayPregunta[i]
             preguntaContenedor.innerHTML = `
             <div id="preg${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
@@ -562,6 +484,25 @@ async function preguntar (){
             dialogo = document.querySelector(`#dialog-default-preg${preguntaACtual.numero}`);
             preguntaContenedor.classList.add(`ocultar`)
             sum()
+
+            /* if(numPreg===3){
+            mensaje = document.createElement(`div`)
+            mensaje.innerHTML = `
+            <div class="nes-container with-title is-centered">
+            <p class="title">IMPORTANTE</p>
+            <p>ESTO ES IMPORTANTE</p>
+            <a class="nes-btn" id="btnMensaje" href="#">Entendido</a>
+          </div>`
+            preguntaSection.appendChild(mensaje)
+
+            preguntaACtual.classList.add(`ocultar`)
+            btnMensaje1=document.querySelector(`#btnMensaje`)
+
+            btnMensaje1.addEventListener(`click`, ()=>{
+                preguntaACtual.classList.remove(`ocultar`)
+                mensaje.classLista.add(`ocultar2`)
+            })
+            } */
 
             if(numPreg==arrayPregunta.length){
 

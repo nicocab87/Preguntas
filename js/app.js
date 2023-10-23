@@ -32,7 +32,7 @@ function sum(){
 
 function actualizarPuntuacion() {
     const puntuacionDiv = document.querySelector(".puntaje");
-    puntuacionDiv.innerHTML = `${nombre} ${personajeElegido.img} Puntos: ${puntos}`;
+    puntuacionDiv.innerHTML = `${nombre} Puntos: ${puntos}`;
   }
 
 
@@ -164,6 +164,7 @@ const eleccionPersonaje = function (){
     imgElegida.classList.add(`img`)
 
     let divPuntaje = document.createElement(`div`)
+    divPuntaje.classList.add(`divPregunta`)
     divPuntaje.innerHTML = `<div class="puntaje"> ${nombre} Puntos: ${puntos} </div>`
     main.appendChild(divPuntaje)
     divPuntaje.appendChild(imgElegida)
@@ -506,13 +507,22 @@ async function preguntar (){
 
             if(numPreg==arrayPregunta.length){
 
-                let divFinal = document.createElement(`div`)
-                divFinal.innerHTML= `
+                if(puntos<= 15){
+                let divFinal15 = document.createElement(`div`)
+                divFinal15.innerHTML= `
                 <div class="nes-container is-rounded">
-                <p>${nombre} has llegado añ final! tu puntuación fue: ${puntos}</p>
+                <p>${nombre} se murieron todos. La proxima será, solo respondiste el ${(puntos*100/60)}%</p>
                 </div>`
-                preguntaSection.appendChild(divFinal)
-                
+                preguntaSection.appendChild(divFinal15)
+                }
+                else if(15< puntos>= 30){
+                let divFinal30 = document.createElement(`div`)
+                divFinal30.innerHTML= `
+                <div class="nes-container is-rounded">
+                <p>${nombre} has hecho lo mas que pudiste, lamentablemente no alcanzó. Pero se valora el esfuerzo! Lograste un ${(puntos*100/60)}% de repuestas correctas!</p>
+                </div>`
+                preguntaSection.appendChild(divFinal30)
+                }
             }
         } 
         

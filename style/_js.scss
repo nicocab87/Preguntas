@@ -6,6 +6,10 @@
     display: none;
 }
 
+main{
+    background-color: #9FA2B2;
+}
+
 .personajeMain{
     display: flex;
     justify-content: space-between;
@@ -40,9 +44,19 @@
     
 }
 
+.nes-btn{
+    &:hover{
+        background-color: #3C7A89;
+    }
+}
 
+.title{
+    border: 5px solid black;
+    background-color: #9FA2B2;
+}
 .preguntaDiv{
     display: grid;
+    background-color: #DBC2CF;
 
      &.ocultar{
          display: none;
@@ -70,15 +84,19 @@
     }
 }
 
+.divPregunta{
 
-.puntaje{
-    position: fixed;
-    background-color: #f0f0f0;
-    margin: 20px;
-    font-size: 10px;
-}
+    display: flex;
+    align-items: center;
 
-.img{
-    height: 50px;
-    width: 50px;
+    .puntaje{
+        position: fixed;
+        font-size: 10px;
+        margin-left: 4rem;
+    }
+
+    .img{
+        height: 50px;
+        width: 50px;
+    }
 }

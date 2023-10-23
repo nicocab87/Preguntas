@@ -50,6 +50,10 @@ html, body, pre, code, kbd, samp {
   display: none;
 }
 
+main {
+  background-color: #9FA2B2;
+}
+
 .personajeMain {
   display: flex;
   justify-content: space-between;
@@ -78,8 +82,18 @@ html, body, pre, code, kbd, samp {
   transform: scale(1.1);
 }
 
+.nes-btn:hover {
+  background-color: #3C7A89;
+}
+
+.title {
+  border: 5px solid black;
+  background-color: #9FA2B2;
+}
+
 .preguntaDiv {
   display: grid;
+  background-color: #DBC2CF;
 }
 .preguntaDiv.ocultar {
   display: none;
@@ -98,14 +112,16 @@ html, body, pre, code, kbd, samp {
   display: flex;
 }
 
-.puntaje {
-  position: fixed;
-  background-color: #f0f0f0;
-  margin: 20px;
-  font-size: 10px;
+.divPregunta {
+  display: flex;
+  align-items: center;
 }
-
-.img {
+.divPregunta .puntaje {
+  position: fixed;
+  font-size: 10px;
+  margin-left: 4rem;
+}
+.divPregunta .img {
   height: 50px;
   width: 50px;
 }

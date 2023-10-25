@@ -116,10 +116,6 @@ function personaje (){
     }
 
    
-    
-    
-
-
 
     let personaje0 = document.querySelector(`#personaje0`)
     personaje0.addEventListener(`click`, () => {
@@ -147,12 +143,10 @@ function personaje (){
     personaje2.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeDinosaurio);
         eleccionPersonaje();
-         preguntar();
-         
-
-       
+         preguntar(); 
     })
 }
+
 
 const eleccionPersonaje = function (){
     personajeMain.classList.add(`ocultarPersonaje`)
@@ -228,156 +222,130 @@ const arrayPregunta =[
     },
 
     {
-        numero: 6,
-        pregunta: "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?",
-        opcionA: "a) Introducir ARN viral en el cuerpo.",
-        opcionB: "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.",
-        opcionC: "c) Modificar el ADN humano.",
-        repuesta: "b"
+    numero: 6,
+    pregunta: "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?",
+    opcionA: "a) Introducir ARN viral en el cuerpo.",
+    opcionB: "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.",
+    opcionC: "c) Modificar el ADN humano.",
+    repuesta: "b"
     },
     {
-        numero: 7,
-        pregunta: "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?",
-        opcionA: "a) Fagocitosis",
-        opcionB: "b) Meiosis",
-        opcionC: "c) Mitosis",
-        repuesta: "c"
+    numero: 7,
+    pregunta: "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?",
+    opcionA: "a) Fagocitosis",
+    opcionB: "b) Meiosis",
+    opcionC: "c) Mitosis",
+    repuesta: "c"
     },
     {
-        numero: 8,
-        pregunta: "¿Qué tipo de molécula contiene la información genética en las células?",
-        opcionA: "a) Proteínas",
-        opcionB: "b) Carbohidratos",
-        opcionC: "c) Ácido desoxirribonucleico (ADN)",
-        repuesta: "c"
+    numero: 8,
+    pregunta: "¿Qué tipo de molécula contiene la información genética en las células?",
+    opcionA: "a) Proteínas",
+    opcionB: "b) Carbohidratos",
+    opcionC: "c) Ácido desoxirribonucleico (ADN)",
+    repuesta: "c"
     },
     {
-        numero: 9,
-        pregunta: "¿Cuál es la función principal de las enzimas?",
-        opcionA: "a) Transportar oxígeno en la sangre",
-        opcionB: "b) Facilitar reacciones químicas",
-        opcionC: "c) Almacenar energía en las células",
-        repuesta: "b"
+    numero: 9,
+    pregunta: "¿Cuál es la función principal de las enzimas?",
+    opcionA: "a) Transportar oxígeno en la sangre",
+    opcionB: "b) Facilitar reacciones químicas",
+    opcionC: "c) Almacenar energía en las células",
+    repuesta: "b"
     },
     {
-        numero: 10,
-        pregunta: "¿Cuál es la unidad básica de la herencia en los seres vivos?",
-        opcionA: "a) Aminoácido",
-        opcionB: "b) Gen",
-        opcionC: "c) Célula",
-        repuesta: "b"
+    numero: 10,
+    pregunta: "¿Cuál es la unidad básica de la herencia en los seres vivos?",
+    opcionA: "a) Aminoácido",
+    opcionB: "b) Gen",
+    opcionC: "c) Célula",
+    repuesta: "b"
     },
     {
-        numero: 11,
-        pregunta: "¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?",
-        opcionA: "a) Retrovirus",
-        opcionB: "b) Adenovirus",
-        opcionC: "c) Herpesvirus",
-        repuesta: "a"
+    numero: 11,
+    pregunta: "¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?",
+    opcionA: "a) Retrovirus",
+    opcionB: "b) Adenovirus",
+    opcionC: "c) Herpesvirus",
+    repuesta: "a"
     },
     {
-        numero: 12,
-        pregunta: "¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?",
-        opcionA: "a) ARN ribosómico (ARNr)",
-        opcionB: "b) ARN de transferencia (ARNt)",
-        opcionC: "c) ARN mensajero (ARNm)",
-        repuesta: "c"
+    numero: 12,
+    pregunta: "¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?",
+    opcionA: "a) ARN ribosómico (ARNr)",
+    opcionB: "b) ARN de transferencia (ARNt)",
+    opcionC: "c) ARN mensajero (ARNm)",
+    repuesta: "c"
     },
     {
-        numero: 13,
-        pregunta: "¿Cuál es la función de las células B en el sistema inmunitario?",
-        opcionA: "a) Producir anticuerpos",
-        opcionB: "b) Fagocitar patógenos",
-        opcionC: "c) Transportar oxígeno en la sangre",
-        repuesta: "a"
+    numero: 13,
+    pregunta: "¿Cuál es la función de las células B en el sistema inmunitario?",
+    opcionA: "a) Producir anticuerpos",
+    opcionB: "b) Fagocitar patógenos",
+    opcionC: "c) Transportar oxígeno en la sangre",
+    repuesta: "a"
     },
     {
-        numero: 14,
-        pregunta: "¿Cuál es la función principal de las células T en el sistema inmunológico?",
-        opcionA: "a) Producir anticuerpos.",
-        opcionB: "b) Destruir células infectadas por patógenos.",
-        opcionC: "c) Filtrar la sangre.",
-        repuesta: "b"
+    numero: 14,
+    pregunta: "¿Cuál es la función principal de las células T en el sistema inmunológico?",
+    opcionA: "a) Producir anticuerpos.",
+    opcionB: "b) Destruir células infectadas por patógenos.",
+    opcionC: "c) Filtrar la sangre.",
+    repuesta: "b"
     },
     {
-        numero: 15,
-        pregunta: "¿Cuál es el propósito de una vacuna de refuerzo?",
-        opcionA: "a) Estimular la respuesta inmunológica inicial.",
-        opcionB: "b) Mantener alta la inmunidad a largo plazo.",
-        opcionC: "c) Tratar las infecciones activas.",
-        repuesta: "b"
+    numero: 15,
+    pregunta: "¿Cuál es el propósito de una vacuna de refuerzo?",
+    opcionA: "a) Estimular la respuesta inmunológica inicial.",
+    opcionB: "b) Mantener alta la inmunidad a largo plazo.",
+    opcionC: "c) Tratar las infecciones activas.",
+    repuesta: "b"
     },
     {
-        numero: 16,
-        pregunta: "¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?",
-        opcionA: "a) Transcripción",
-        opcionB: "b) Traducción",
-        opcionC: "c) Replicación",
-        repuesta: "b"
+    numero: 16,
+    pregunta: "¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?",
+    opcionA: "a) Transcripción",
+    opcionB: "b) Traducción",
+    opcionC: "c) Replicación",
+    repuesta: "b"
     },
     {
-        numero: 17,
-        pregunta: "¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?",
-        opcionA: "a) ARN ribosómico (ARNr)",
-        opcionB: "b) ARN mensajero (ARNm)",
-        opcionC: "c) ARN de transferencia (tARN)",
-        repuesta: "b"
+    numero: 17,
+    pregunta: "¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?",
+    opcionA: "a) ARN ribosómico (ARNr)",
+    opcionB: "b) ARN mensajero (ARNm)",
+    opcionC: "c) ARN de transferencia (tARN)",
+    repuesta: "b"
     },
     {
-        numero: 18,
-        pregunta: "¿Cuál es el objetivo de un adyuvante en una vacuna?",
-        opcionA: "a) Prevenir reacciones alérgicas",
-        opcionB: "b) Potenciar la respuesta inmunitaria",
-        opcionC: "c) Reducir la eficacia de la vacuna",
-        repuesta: "b"
+    numero: 18,
+    pregunta: "¿Cuál es el objetivo de un adyuvante en una vacuna?",
+    opcionA: "a) Prevenir reacciones alérgicas",
+    opcionB: "b) Potenciar la respuesta inmunitaria",
+    opcionC: "c) Reducir la eficacia de la vacuna",
+    repuesta: "b"
     },
     {
-        numero: 19,
-        pregunta: "¿Qué función tienen los anticuerpos en el sistema inmunitario?",
-        opcionA: "a) Transportar oxígeno en la sangre",
-        opcionB: "b) Eliminar patógenos y toxinas",
-        opcionC: "c) Digerir alimentos",
-        repuesta: "b"
+    numero: 19,
+    pregunta: "¿Qué función tienen los anticuerpos en el sistema inmunitario?",
+    opcionA: "a) Transportar oxígeno en la sangre",
+    opcionB: "b) Eliminar patógenos y toxinas",
+    opcionC: "c) Digerir alimentos",
+    repuesta: "b"
     },
 
     {
-        numero: 20,
-        pregunta: "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?",
-        opcionA: "a) Una técnica para amplificar y detectar material genético.",
-        opcionB: "b) Un tipo de vacuna.",
-        opcionC: "c) Una técnica para purificar proteínas.",
-        repuesta: "a"
+    numero: 20,
+    pregunta: "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?",
+    opcionA: "a) Una técnica para amplificar y detectar material genético.",
+    opcionB: "b) Un tipo de vacuna.",
+    opcionC: "c) Una técnica para purificar proteínas.",
+    repuesta: "a"
     }
 
 ]
 
-function pushearObjeto(num, preguntas, A, B,C,rta ){
-    this.numero=num
-    this.pregunta = preguntas
-    this.opcionA= A
-    this.opcionB = B
-    this.opcionC= C
-    this.repuesta=rta
-    arrayPregunta.push (pushearObjeto)
-}
 
-/* pushearObjeto ("5", "¿Qué es la inmunidad de rebaño?", "a) Cuando todos en una comunidad tienen la misma enfermedad", "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son", "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación", "b")
-pushearObjeto("6", "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?", "a) Introducir ARN viral en el cuerpo.", "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.", "c) Modificar el ADN humano.", "b")
-pushearObjeto("7", "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?", "a) Fagocitosis", "b) Meiosis", "c) Mitosis", "c")
-pushearObjeto("8", "¿Qué tipo de molécula contiene la información genética en las células?", "a) Proteínas", "b) Carbohidratos", "c) Ácido desoxirribonucleico (ADN)", "c")
-pushearObjeto("9","¿Cuál es la función principal de las enzimas?", "a) Transportar oxígeno en la sangre", "b) Facilitar reacciones químicas", "c) Almacenar energía en las células", "b")
-pushearObjeto("10", "¿Cuál es la unidad básica de la herencia en los seres vivos?", "a) Aminoácido", "b) Gen", "c) Célula", "b")
-pushearObjeto("11", "¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?", "a) Retrovirus", "b) Adenovirus", "c) Herpesvirus", "a")
-pushearObjeto("12", "¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?", "a) ARN ribosómico (ARNr)", "b) ARN de trasnferencia (ARNt)", "c) ARN mensajero (ARNm)", "c")
-pushearObjeto("13", "¿Cuál es la función de las células B en el sistema inmunitario?", "a) Producir anticuerpos", "b) Fagocitar patógenos", "c) Transportar oxígeno en la sangre", "a")
-pushearObjeto("14", "¿Cuál es la función principal de las células T en el sistema inmunológico?", "a) Producir anticuerpos.", "b) Destruir células infectadas por patógenos.", "c) Filtrar la sangre.", "b")
-pushearObjeto("15", "¿Cuál es el propósito de una vacuna de refuerzo?", "a) Estimular la respuesta inmunológica inicial.", "b) Mantener alta la inmunidad a largo plazo.", "c) Tratar las infecciones activas.", "b")
-pushearObjeto("16", "¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?", "a) Transcripción", "b) Traducción", "c) Replicación", "b")
-pushearObjeto("17", "¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?", "a) ARN ribosómico (ARNr)", "b) ARN mensajero (ARNm)", "c) ARN de transferencia (tARN)", "b")
-pushearObjeto("18", "¿Cuál es el objetivo de un adyuvante en una vacuna?", "a) Prevenir reacciones alérgicas", "b) Potenciar la respuesta inmunitaria", "c) Reducir la eficacia de la vacuna", "b")
-pushearObjeto("19", "¿Qué función tienen los anticuerpos en el sistema inmunitario?", "a) Transportar oxígeno en la sangre", "b) Eliminar patógenos y toxinas", "c) Digerir alimentos", "b")
-pushearObjeto("20", "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?", "a) Una técnica para amplificar y detectar material genético.", "b) Un tipo de vacuna.", "c) Una técnica para purificar proteínas.", "a")
- */
 
 let preguntaACtual
 let preguntaContenedor
@@ -389,145 +357,140 @@ main.appendChild(preguntaSection)
 
 async function preguntar (){
 
-        for (i=0; i<  arrayPregunta.length; i+=1){
-            preguntaContenedor = document.createElement(`div`)
-            preguntaContenedor.classList.add(`scale-in-hor-center`)
-            preguntaACtual = arrayPregunta[i]
-            preguntaContenedor.innerHTML = `
-            <div id="preg${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
-            <p class="title">${preguntaACtual.pregunta}</p>
-            <p class="opcionPregunta">Las opciones son: </p>
-            <p class="opcionPregunta">${preguntaACtual.opcionA}</p>
-            <p class="opcionPregunta">${preguntaACtual.opcionB}</p>
-            <p class="opcionPregunta">${preguntaACtual.opcionC}</p>
-            <a class="nes-btn" id="btnA-preg${preguntaACtual.numero}" href="#">Opcion A</a>
-            <a class="nes-btn" id="btnB-preg${preguntaACtual.numero}" href="#">Opcion B</a>
-            <a class="nes-btn" id="btnC-preg${preguntaACtual.numero}" href="#">Opcion C</a>
-          </div>`
-
-
-            preguntaSection.appendChild(preguntaContenedor)
-
-            
- 
-            btnA = document.querySelector(`#btnA-preg${preguntaACtual.numero}`);
-            btnB = document.querySelector(`#btnB-preg${preguntaACtual.numero}`);
-            btnC = document.querySelector(`#btnC-preg${preguntaACtual.numero}`);
-    
-            btnA.addEventListener(`click`, () => { 
-                funcionDialogo("a"); 
-             })
-             
-             btnB.addEventListener(`click`, () => { 
-                funcionDialogo("b"); 
-             })
+    for (i=0; i<  arrayPregunta.length; i+=1){
+        preguntaContenedor = document.createElement(`div`)
+        preguntaContenedor.classList.add(`scale-in-hor-center`)
+        preguntaACtual = arrayPregunta[i]
+        preguntaContenedor.innerHTML = `
+        <div id="preg${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
+        <p class="title">${preguntaACtual.pregunta}</p>
+        <p class="opcionPregunta">Las opciones son: </p>
+        <p class="opcionPregunta">${preguntaACtual.opcionA}</p>
+        <p class="opcionPregunta">${preguntaACtual.opcionB}</p>
+        <p class="opcionPregunta">${preguntaACtual.opcionC}</p>
+        <a class="nes-btn" id="btnA-preg${preguntaACtual.numero}" href="#">Opcion A</a>
+        <a class="nes-btn" id="btnB-preg${preguntaACtual.numero}" href="#">Opcion B</a>
+        <a class="nes-btn" id="btnC-preg${preguntaACtual.numero}" href="#">Opcion C</a>
+      </div>`
+        preguntaSection.appendChild(preguntaContenedor)
         
-             btnC.addEventListener(`click`, () => { 
-                funcionDialogo("c");
 
-             })
-             
-            await esperarFuncion();
+        btnA = document.querySelector(`#btnA-preg${preguntaACtual.numero}`);
+        btnB = document.querySelector(`#btnB-preg${preguntaACtual.numero}`);
+        btnC = document.querySelector(`#btnC-preg${preguntaACtual.numero}`);
 
-            function esperarFuncion() {
-                 return new Promise((resolve) => {
-                btnB.addEventListener("click", () => {
-                   resolve()
-                    preguntaContenedor.classList.add(`ocultar2`)})
-                btnA.addEventListener("click", () => {
-                   resolve()
-                    preguntaContenedor.classList.add(`ocultar2`)})
-                btnC.addEventListener("click", () => {
-                   resolve()
-                    preguntaContenedor.classList.add(`ocultar2`)});
-                 })}
-
-            
-   
-        }
-
-        function funcionDialogo (x){
-
-            if ( x == preguntaACtual.repuesta){
-                Swal.fire({
-                    title: '<strong>Bien ahi!</strong>',
-                    html:
-                    `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
-                    <form method="dialog">
-                      <p> Acertaste, sos crack</p>
-                    </form>
-                    </div>`,
-                    focusConfirm: false,
-                    confirmButtonText:
-                      '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!',
-                    confirmButtonAriaLabel: 'Thumbs up, great!',
-                  })
-
-                agregarPuntos();
+        btnA.addEventListener(`click`, () => { 
+            funcionDialogo("a"); 
+         })
+         
+         btnB.addEventListener(`click`, () => { 
+            funcionDialogo("b"); 
+         })
     
-            }else{
-                Swal.fire({
-                    title: '<strong>Incorrecta!</strong>',
-                    html:
-                    `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
-                    <form method="dialog">
-                      <p> Noo mi rey, la pifiaste</p>
-                    </form>
-                    </div>`,
-                    focusConfirm: false,
-                    confirmButtonText:
-                      '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!'
-                  })
+         btnC.addEventListener(`click`, () => { 
+            funcionDialogo("c");
+         })
+         
+        await esperarFuncion();
+        function esperarFuncion() {
+             return new Promise((resolve) => {
+            btnB.addEventListener("click", () => {
+               resolve()
+                preguntaContenedor.classList.add(`ocultar2`)})
+            btnA.addEventListener("click", () => {
+               resolve()
+                preguntaContenedor.classList.add(`ocultar2`)})
+            btnC.addEventListener("click", () => {
+               resolve()
+                preguntaContenedor.classList.add(`ocultar2`)});
+             })}
+        
 
-            }
+    }
+    function funcionDialogo (x){
+        if ( x == preguntaACtual.repuesta){
+            Swal.fire({
+                title: '<strong>Bien ahi!</strong>',
+                html:
+                `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
+                <form method="dialog">
+                  <p> Acertaste, sos crack</p>
+                </form>
+                </div>`,
+                focusConfirm: false,
+                confirmButtonText:
+                  '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!',
+                confirmButtonAriaLabel: 'Thumbs up, great!',
+              })
+            agregarPuntos();
 
-            btnConfirm = document.querySelector(`#btnConfirm-preg${preguntaACtual.numero}`);
-            dialogo = document.querySelector(`#dialog-default-preg${preguntaACtual.numero}`);
-            preguntaContenedor.classList.add(`ocultar`)
-            sum()
+        }else{
+            Swal.fire({
+                title: '<strong>Incorrecta!</strong>',
+                html:
+                `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
+                <form method="dialog">
+                  <p> Noo mi rey, la pifiaste</p>
+                </form>
+                </div>`,
+                focusConfirm: false,
+                confirmButtonText:
+                  '<button id= "confirm" class=""nes-btn is-primary"></button> Ok!'
+              })
+        }
+        btnConfirm = document.querySelector(`#btnConfirm-preg${preguntaACtual.numero}`);
+        dialogo = document.querySelector(`#dialog-default-preg${preguntaACtual.numero}`);
+        preguntaContenedor.classList.add(`ocultar`)
+        sum()
+        
 
-            /* if(numPreg===3){
-            mensaje = document.createElement(`div`)
-            mensaje.innerHTML = `
-            <div class="nes-container with-title is-centered">
-            <p class="title">IMPORTANTE</p>
-            <p>ESTO ES IMPORTANTE</p>
-            <a class="nes-btn" id="btnMensaje" href="#">Entendido</a>
-          </div>`
-            preguntaSection.appendChild(mensaje)
-
-            preguntaACtual.classList.add(`ocultar`)
-            btnMensaje1=document.querySelector(`#btnMensaje`)
-
-            btnMensaje1.addEventListener(`click`, ()=>{
-                preguntaACtual.classList.remove(`ocultar`)
-                mensaje.classLista.add(`ocultar2`)
-            })
-            } */
-
-            if(numPreg==arrayPregunta.length){
-
-                if(puntos<= 15){
+        if(numPreg==arrayPregunta.length){
+            if(puntos<= 15){
                 let divFinal15 = document.createElement(`div`)
                 divFinal15.innerHTML= `
                 <div class="nes-container is-rounded">
-                <p>${nombre} se murieron todos. La proxima será, solo respondiste el ${(puntos*100/60)}%</p>
+                <p>${nombre}, has fallecido duarente el inteto. Vuelve a intentarlo! Respondiste bien solamente el ${(puntos*100/60)}% de las preguntas</p>
                 </div>`
                 preguntaSection.appendChild(divFinal15)
-                }
-                else if(15< puntos>= 30){
+            }
+            else if(15< puntos>= 30){
                 let divFinal30 = document.createElement(`div`)
                 divFinal30.innerHTML= `
                 <div class="nes-container is-rounded">
                 <p>${nombre} has hecho lo mas que pudiste, lamentablemente no alcanzó. Pero se valora el esfuerzo! Lograste un ${(puntos*100/60)}% de repuestas correctas!</p>
                 </div>`
                 preguntaSection.appendChild(divFinal30)
-                }
+            }else if(15< puntos>= 30){
+                let divFinal30 = document.createElement(`div`)
+                divFinal30.innerHTML= `
+                <div class="nes-container is-rounded">
+                <p>$La vacuna ha salido, ${nombre}, pero la fakes news ganaron, lamentablemente la gente sufrió mucho culpa de grupos conspiranoicos. Lograste un ${(puntos*100/60)}% de repuestas correctas!</p>
+                </div>`
+                preguntaSection.appendChild(divFinal30)
+            }else if(30< puntos>= 45){
+                    let divFinal45 = document.createElement(`div`)
+                    divFinal45.innerHTML= `
+                    <div class="nes-container is-rounded">
+                    <p>${nombre} Has logrado encontrar la vacuna y salvar muchas vidas! La sociedad está en deuda con vos. Fe-li-ci-ta-cio-nes! Lograste un ${(puntos*100/60)}% de repuestas correctas!</p>
+                    </div>`
+                    preguntaSection.appendChild(divFinal45)
+            }else if(45< puntos> 60){
+                let divFinal59 = document.createElement(`div`)
+                divFinal59.innerHTML= `
+                <div class="nes-container is-rounded">
+                <p>${nombre} Lograste un ${(puntos*100/60)}% de repuestas correctas, casi un puntaje correcto! No solo que encontraste la vacuna, sino que fuiste premiado con varios premios! Gran trabajo!</p>
+                </div>`
+                preguntaSection.appendChild(divFinal59)
+            }else{
+                let divFinal60 = document.createElement(`div`)
+                divFinal60.innerHTML= `
+                <div class="nes-container is-rounded">
+                <p>${nombre} Lograste un ${(puntos*100/60)}% de repuestas correctas, un puntaje perfecto! No solo que tu vacuna salvó la humanidad, sino que tu trabajo fue el ganador del premio nobel! </p>
+                </div>`
+                preguntaSection.appendChild(divFinal60)
             }
         } 
-        
-
-
+    }
 }
 
 

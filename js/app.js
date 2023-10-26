@@ -444,52 +444,44 @@ async function preguntar (){
         sum()
         
 
-        if(numPreg==arrayPregunta.length){
-            if(puntos<= 15){
-                let divFinal15 = document.createElement(`div`)
-                divFinal15.innerHTML= `
-                <div class="nes-container is-rounded">
-                <p>${nombre}, has fallecido duarente el inteto. Vuelve a intentarlo! Respondiste bien solamente el ${(puntos*100/60)}% de las preguntas</p>
-                </div>`
-                preguntaSection.appendChild(divFinal15)
-            }
-            else if(15< puntos>= 30){
-                let divFinal30 = document.createElement(`div`)
-                divFinal30.innerHTML= `
-                <div class="nes-container is-rounded">
-                <p>${nombre} has hecho lo mas que pudiste, lamentablemente no alcanzó. Pero se valora el esfuerzo! Lograste un ${(puntos*100/60)}% de repuestas correctas!</p>
-                </div>`
-                preguntaSection.appendChild(divFinal30)
-            }else if(15< puntos>= 30){
-                let divFinal30 = document.createElement(`div`)
-                divFinal30.innerHTML= `
-                <div class="nes-container is-rounded">
-                <p>$La vacuna ha salido, ${nombre}, pero la fakes news ganaron, lamentablemente la gente sufrió mucho culpa de grupos conspiranoicos. Lograste un ${(puntos*100/60)}% de repuestas correctas!</p>
-                </div>`
-                preguntaSection.appendChild(divFinal30)
-            }else if(30< puntos>= 45){
-                    let divFinal45 = document.createElement(`div`)
-                    divFinal45.innerHTML= `
+        if (numPreg == arrayPregunta.length) {
+            if (puntos <= 15) {
+                let divFinal15 = document.createElement('div');
+                divFinal15.innerHTML = `
                     <div class="nes-container is-rounded">
-                    <p>${nombre} Has logrado encontrar la vacuna y salvar muchas vidas! La sociedad está en deuda con vos. Fe-li-ci-ta-cio-nes! Lograste un ${(puntos*100/60)}% de repuestas correctas!</p>
-                    </div>`
-                    preguntaSection.appendChild(divFinal45)
-            }else if(45< puntos> 60){
-                let divFinal59 = document.createElement(`div`)
-                divFinal59.innerHTML= `
-                <div class="nes-container is-rounded">
-                <p>${nombre} Lograste un ${(puntos*100/60)}% de repuestas correctas, casi un puntaje correcto! No solo que encontraste la vacuna, sino que fuiste premiado con varios premios! Gran trabajo!</p>
-                </div>`
-                preguntaSection.appendChild(divFinal59)
-            }else{
-                let divFinal60 = document.createElement(`div`)
-                divFinal60.innerHTML= `
-                <div class="nes-container is-rounded">
-                <p>${nombre} Lograste un ${(puntos*100/60)}% de repuestas correctas, un puntaje perfecto! No solo que tu vacuna salvó la humanidad, sino que tu trabajo fue el ganador del premio nobel! </p>
-                </div>`
-                preguntaSection.appendChild(divFinal60)
+                        <p>${nombre}, has fallecido durante el intento. Vuelve a intentarlo! Respondiste bien solamente el ${(puntos * 100) / 60}% de las preguntas</p>
+                    </div>`;
+                preguntaSection.appendChild(divFinal15);
+            } else if (puntos > 15 && puntos <= 30) {
+                let divFinal30 = document.createElement('div');
+                divFinal30.innerHTML = `
+                    <div class="nes-container is-rounded">
+                        <p>${nombre} has hecho lo más que pudiste, lamentablemente no alcanzó. Pero se valora el esfuerzo! Lograste un ${(puntos * 100) / 60}% de respuestas correctas!</p>
+                    </div>`;
+                preguntaSection.appendChild(divFinal30);
+            } else if (puntos > 30 && puntos <= 45) {
+                let divFinal45 = document.createElement('div');
+                divFinal45.innerHTML = `
+                    <div class="nes-container is-rounded">
+                        <p>${nombre} Has logrado encontrar la vacuna y salvar muchas vidas! La sociedad está en deuda contigo. ¡Felicidades! Lograste un ${(puntos * 100) / 60}% de respuestas correctas!</p>
+                    </div>`;
+                preguntaSection.appendChild(divFinal45);
+            } else if (puntos > 45 && puntos < 60) {
+                let divFinal59 = document.createElement('div');
+                divFinal59.innerHTML = `
+                    <div class="nes-container is-rounded">
+                        <p>${nombre} Lograste un ${(puntos * 100) / 60}% de respuestas correctas, casi un puntaje perfecto! No solo encontraste la vacuna, sino que fuiste premiado con varios premios. ¡Gran trabajo!</p>
+                    </div>`;
+                preguntaSection.appendChild(divFinal59);
+            } else if (puntos == 60) {
+                let divFinal60 = document.createElement('div');
+                divFinal60.innerHTML = `
+                    <div class="nes-container is-rounded">
+                        <p>${nombre} Lograste un ${(puntos * 100) / 60}% de respuestas correctas, un puntaje perfecto! No solo encontraste la vacuna, sino que tu trabajo fue el ganador del premio Nobel.</p>
+                    </div>`;
+                preguntaSection.appendChild(divFinal60);
             }
-        } 
+        }
     }
 }
 

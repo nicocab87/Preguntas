@@ -121,10 +121,7 @@ function personaje (){
     personaje0.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeHombre);
         eleccionPersonaje();
-        preguntar();
-
-          
-        
+        preguntar();  
     })
 
 
@@ -133,9 +130,7 @@ function personaje (){
     personaje1.addEventListener(`click`, () => {
         personajeElegido = personajes.filter ((psj)=> psj === personajeMujer);
         eleccionPersonaje();
-         preguntar();
-  
-
+        preguntar();
     })
 
 
@@ -184,181 +179,14 @@ let btnA
 let btnB
 let btnC
 
-/* const arrayPregunta =[
-    {numero: 1,
-    pregunta: "¿Qué es un antígeno?", 
-    opcionA: "a) Un microorganismo",
-    opcionB: "b) Una molécula que el sistema inmunológico reconoce",
-    opcionC: "c) Un medicamento",
-    repuesta: "b"
-    },
-
-    {numero: 2,
-    pregunta: "¿Cuál es uno de los métodos comunes para administrar una vacuna?", 
-    opcionA: "a) Intramuscular",
-    opcionB: "b) Intravenosa",
-    opcionC: "c) Oral",
-    repuesta: "a"
-    },
-
-    {numero: 3,
-    pregunta: "¿Qué es una vacuna?", 
-    opcionA: "a) Un tratamiento médico",
-    opcionB: "b) Intravenosa",
-    opcionC: "c) Una preparación que estimula el sistema inmunológico",
-    repuesta: "c"
-    },
-
-    {numero: 4,
-    pregunta: "¿Cuál es el propósito principal de una vacuna?", 
-    opcionA: "a) Tratar enfermedades",
-    opcionB: "b) Prevenir enfermedades " ,
-    opcionC: "c) Diagnosticar enfermedades",
-    repuesta: "b"
-    },
-
-    {numero: 5,
-    pregunta: "¿Qué es la inmunidad de rebaño?",
-    opcionA: "a) Cuando todos en una comunidad tienen la misma enfermedad",
-    opcionB: "b) Cuando una gran proporción de la población es inmune a una enfermedad, lo que protege a aquellos que no lo son",
-    opcionC: "c) Cuando se desarrolla inmunidad permanente después de una sola vacunación",
-    repuesta: "b"
-    },
-
-    {
-    numero: 6,
-    pregunta: "¿Cuál es la función principal de las vacunas de ARN mensajero (ARNm)?",
-    opcionA: "a) Introducir ARN viral en el cuerpo.",
-    opcionB: "b) Estimular la respuesta inmunológica sin utilizar virus vivos/atenuados.",
-    opcionC: "c) Modificar el ADN humano.",
-    repuesta: "b"
-    },
-    {
-    numero: 7,
-    pregunta: "¿Cuál es el proceso por el cual una célula se divide en dos células hijas idénticas?",
-    opcionA: "a) Fagocitosis",
-    opcionB: "b) Meiosis",
-    opcionC: "c) Mitosis",
-    repuesta: "c"
-    },
-    {
-    numero: 8,
-    pregunta: "¿Qué tipo de molécula contiene la información genética en las células?",
-    opcionA: "a) Proteínas",
-    opcionB: "b) Carbohidratos",
-    opcionC: "c) Ácido desoxirribonucleico (ADN)",
-    repuesta: "c"
-    },
-    {
-    numero: 9,
-    pregunta: "¿Cuál es la función principal de las enzimas?",
-    opcionA: "a) Transportar oxígeno en la sangre",
-    opcionB: "b) Facilitar reacciones químicas",
-    opcionC: "c) Almacenar energía en las células",
-    repuesta: "b"
-    },
-    {
-    numero: 10,
-    pregunta: "¿Cuál es la unidad básica de la herencia en los seres vivos?",
-    opcionA: "a) Aminoácido",
-    opcionB: "b) Gen",
-    opcionC: "c) Célula",
-    repuesta: "b"
-    },
-    {
-    numero: 11,
-    pregunta: "¿Qué tipo de virus utiliza ARN en lugar de ADN para su información genética?",
-    opcionA: "a) Retrovirus",
-    opcionB: "b) Adenovirus",
-    opcionC: "c) Herpesvirus",
-    repuesta: "a"
-    },
-    {
-    numero: 12,
-    pregunta: "¿Qué tipo de ácido nucleico se encuentra en las vacunas de ARN?",
-    opcionA: "a) ARN ribosómico (ARNr)",
-    opcionB: "b) ARN de transferencia (ARNt)",
-    opcionC: "c) ARN mensajero (ARNm)",
-    repuesta: "c"
-    },
-    {
-    numero: 13,
-    pregunta: "¿Cuál es la función de las células B en el sistema inmunitario?",
-    opcionA: "a) Producir anticuerpos",
-    opcionB: "b) Fagocitar patógenos",
-    opcionC: "c) Transportar oxígeno en la sangre",
-    repuesta: "a"
-    },
-    {
-    numero: 14,
-    pregunta: "¿Cuál es la función principal de las células T en el sistema inmunológico?",
-    opcionA: "a) Producir anticuerpos.",
-    opcionB: "b) Destruir células infectadas por patógenos.",
-    opcionC: "c) Filtrar la sangre.",
-    repuesta: "b"
-    },
-    {
-    numero: 15,
-    pregunta: "¿Cuál es el propósito de una vacuna de refuerzo?",
-    opcionA: "a) Estimular la respuesta inmunológica inicial.",
-    opcionB: "b) Mantener alta la inmunidad a largo plazo.",
-    opcionC: "c) Tratar las infecciones activas.",
-    repuesta: "b"
-    },
-    {
-    numero: 16,
-    pregunta: "¿Cuál es el proceso de fabricación de proteínas a partir de la información genética?",
-    opcionA: "a) Transcripción",
-    opcionB: "b) Traducción",
-    opcionC: "c) Replicación",
-    repuesta: "b"
-    },
-    {
-    numero: 17,
-    pregunta: "¿Qué tipo de ARN lleva la información genética de un gen desde el núcleo hasta el citoplasma para la síntesis de proteínas?",
-    opcionA: "a) ARN ribosómico (ARNr)",
-    opcionB: "b) ARN mensajero (ARNm)",
-    opcionC: "c) ARN de transferencia (tARN)",
-    repuesta: "b"
-    },
-    {
-    numero: 18,
-    pregunta: "¿Cuál es el objetivo de un adyuvante en una vacuna?",
-    opcionA: "a) Prevenir reacciones alérgicas",
-    opcionB: "b) Potenciar la respuesta inmunitaria",
-    opcionC: "c) Reducir la eficacia de la vacuna",
-    repuesta: "b"
-    },
-    {
-    numero: 19,
-    pregunta: "¿Qué función tienen los anticuerpos en el sistema inmunitario?",
-    opcionA: "a) Transportar oxígeno en la sangre",
-    opcionB: "b) Eliminar patógenos y toxinas",
-    opcionC: "c) Digerir alimentos",
-    repuesta: "b"
-    },
-
-    {
-    numero: 20,
-    pregunta: "¿Qué es la PCR (Reacción en Cadena de la Polimerasa)?",
-    opcionA: "a) Una técnica para amplificar y detectar material genético.",
-    opcionB: "b) Un tipo de vacuna.",
-    opcionC: "c) Una técnica para purificar proteínas.",
-    repuesta: "a"
-    }
-
-] */
-
-
-
 let preguntaACtual
 let preguntaContenedor
+
+let objetoDatos
 
 let preguntaSection = document.createElement (`section`);
 preguntaSection.innerHTML =`<section id="preguntaSection" class="preguntaSection"> </section>`
 main.appendChild(preguntaSection)
-
-let objetoDatos
 
 
 function ranking (){
@@ -420,6 +248,7 @@ function ranking (){
     preguntaSection.classList.toggle(`ocultar`)
     })
 
+    divPuntaje.classList.add(`ocultar`)
 }
 
 
@@ -442,15 +271,15 @@ function preguntar (){
         preguntaACtual = arrayPregunta[i]
         preguntaContenedor.innerHTML = `
         <div id="preg${preguntaACtual.numero}" class="nes-container with-title is-centered preguntaDiv">
-        <p class="title">${preguntaACtual.pregunta}</p>
-        <p class="opcionPregunta">Las opciones son: </p>
-        <p class="opcionPregunta">${preguntaACtual.opcionA}</p>
-        <p class="opcionPregunta">${preguntaACtual.opcionB}</p>
-        <p class="opcionPregunta">${preguntaACtual.opcionC}</p>
-        <a class="nes-btn" id="btnA-preg${preguntaACtual.numero}" href="#">Opcion A</a>
-        <a class="nes-btn" id="btnB-preg${preguntaACtual.numero}" href="#">Opcion B</a>
-        <a class="nes-btn" id="btnC-preg${preguntaACtual.numero}" href="#">Opcion C</a>
-      </div>`
+            <p class="title">${preguntaACtual.pregunta}</p>
+            <p class="opcionPregunta">Las opciones son: </p>
+            <p class="opcionPregunta">${preguntaACtual.opcionA}</p>
+            <p class="opcionPregunta">${preguntaACtual.opcionB}</p>
+            <p class="opcionPregunta">${preguntaACtual.opcionC}</p>
+            <a class="nes-btn" id="btnA-preg${preguntaACtual.numero}" href="#">Opcion A</a>
+            <a class="nes-btn" id="btnB-preg${preguntaACtual.numero}" href="#">Opcion B</a>
+            <a class="nes-btn" id="btnC-preg${preguntaACtual.numero}" href="#">Opcion C</a>
+        </div>`
         preguntaSection.appendChild(preguntaContenedor)
         
 
@@ -460,42 +289,42 @@ function preguntar (){
 
         btnA.addEventListener(`click`, () => { 
             funcionDialogo("a"); 
-         })
+        })
          
          btnB.addEventListener(`click`, () => { 
             funcionDialogo("b"); 
-         })
+        })
     
          btnC.addEventListener(`click`, () => { 
             funcionDialogo("c");
-         })
+    })
          
          
         await esperarFuncion();
         function esperarFuncion() {
-             return new Promise((resolve) => {
-            btnB.addEventListener("click", () => {
-               resolve()
-                preguntaContenedor.classList.add(`ocultar2`)})
-            btnA.addEventListener("click", () => {
-               resolve()
-                preguntaContenedor.classList.add(`ocultar2`)})
-            btnC.addEventListener("click", () => {
-               resolve()
-                preguntaContenedor.classList.add(`ocultar2`)});
-             })}
-        
-
+            return new Promise((resolve) => {
+                btnB.addEventListener("click", () => {
+                   resolve()
+                    preguntaContenedor.classList.add(`ocultar2`)})
+                btnA.addEventListener("click", () => {
+                   resolve()
+                    preguntaContenedor.classList.add(`ocultar2`)})
+                btnC.addEventListener("click", () => {
+                   resolve()
+                    preguntaContenedor.classList.add(`ocultar2`)});
+            })
+        }
     }
+
     function funcionDialogo (x){
         if ( x == preguntaACtual.repuesta){
             Swal.fire({
                 title: '<strong>Bien ahi!</strong>',
                 html:
                 `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
-                <form method="dialog">
-                  <p> Acertaste, sos crack</p>
-                </form>
+                    <form method="dialog">
+                      <p> Acertaste, sos crack</p>
+                    </form>
                 </div>`,
                 focusConfirm: false,
                 confirmButtonText:
@@ -509,9 +338,9 @@ function preguntar (){
                 title: '<strong>Incorrecta!</strong>',
                 html:
                 `<div class="nes-dialog" id="dialog-default-preg${preguntaACtual.numero}}">
-                <form method="dialog">
-                  <p> Noo mi rey, la pifiaste</p>
-                </form>
+                    <form method="dialog">
+                      <p> Noo mi rey, la pifiaste</p>
+                    </form>
                 </div>`,
                 focusConfirm: false,
                 confirmButtonText:
@@ -565,7 +394,7 @@ function preguntar (){
                 preguntaSection.appendChild(divFinal59);
                 ranking()
 
-            } else if (puntos == 60) {
+            }   else if (puntos == 60) {
 
                 let divFinal60 = document.createElement('div');
                 divFinal60.innerHTML = `
@@ -574,33 +403,9 @@ function preguntar (){
                     </div>`;
                 preguntaSection.appendChild(divFinal60);
                 ranking()
+                }
             }
         }
     }
 }
-}
 
-
-
-
-
-
-
-
-
-
-
-// Final
-/* if(numPreg*3 === puntos){
-    console.log(`Felicitaciones, ${nombre}, has logrado un puntaje perfecto, la verdad que superaste toda expectativa posible! has salvado la humanidad y fuiste recompensado con cinco millones de dolares`)
-}else if(36 < puntos < numPreg*3){
-    console.log(`Excelente desempeño ${nombre}! Has logrado encontrar la vacuna y la sociedad te lo ha agradecido con una estatua con tu nombre! Fe-li-ci-ta-ciones!`)
-}else if (15 < puntos <= 36){
-    console.log(`La vacuna ha salido, ${nombre}, pero la fakes news ganaron, lamentablemente la gente sufrió mucho culpa de grupos conspiranoicos.`)
-}else{
-    console.log(`${nombre}, has fallecido duarente el inteto. Vuelve a intentarlo!`)
-}
-
-console.log(`Tu puntaje final fue de: ${puntos}`)
-
-console.log(`FIN DEL JUEGO`) */

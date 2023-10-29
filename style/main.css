@@ -42,16 +42,16 @@ html, body, pre, code, kbd, samp {
   width: 200px;
 }
 
+main {
+  background-color: #9FA2B2;
+}
+
 .ocultar {
   display: none;
 }
 
 .ocultar2 {
   display: none;
-}
-
-main {
-  background-color: #9FA2B2;
 }
 
 .bienvenida {
@@ -133,6 +133,10 @@ main {
 
 .textoFinal {
   background-color: #DBC2CF;
+}
+
+.btnRanking {
+  scale: 0.9;
 }
 @keyframes scale-in-hor-center {
   0% {

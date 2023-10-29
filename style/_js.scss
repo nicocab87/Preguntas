@@ -1,3 +1,7 @@
+main{
+    background-color: #9FA2B2;
+}
+
 .ocultar{
     display: none;
 }
@@ -6,12 +10,8 @@
     display: none;
 }
 
-main{
-    background-color: #9FA2B2;
-}
-
 .bienvenida{
-    background-color:#DBC2CF
+    background-color:#DBC2CF;
 }
 
 .personajeMain{
@@ -108,4 +108,8 @@ main{
 
 .textoFinal{
     background-color:  #DBC2CF ;
+}
+
+.btnRanking{
+    scale: 0.9;
 }

@@ -54,6 +54,10 @@ main {
   background-color: #9FA2B2;
 }
 
+.bienvenida {
+  background-color: #DBC2CF;
+}
+
 .personajeMain {
   display: flex;
   justify-content: space-between;
@@ -67,7 +71,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-right: 10px;
-  background-color: #a6a5a5;
+  background-color: rgba(189, 168, 179, 0.9647058824);
   font-size: 0.8rem;
   border: 5px solid black;
   border-radius: 5px;
@@ -80,6 +84,7 @@ main {
 }
 .personajeMain .personaje:hover {
   transform: scale(1.1);
+  background-color: #DBC2CF;
 }
 
 .nes-btn:hover {
@@ -124,6 +129,10 @@ main {
 .divPregunta .img {
   height: 50px;
   width: 50px;
+}
+
+.textoFinal {
+  background-color: #DBC2CF;
 }
 @keyframes scale-in-hor-center {
   0% {

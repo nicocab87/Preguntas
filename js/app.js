@@ -30,11 +30,11 @@ function sum(){
     numPreg+=1
 }
 
+
 function actualizarPuntuacion() {
     const puntuacionDiv = document.querySelector(".puntaje");
     puntuacionDiv.innerHTML = `${nombre} Puntos: ${puntos}`;
   }
-
 
 
 // Personajes
@@ -47,14 +47,14 @@ const imgDinosaurioSrc = "./img/personajeDino.jpg";
 const opciones =["A", "B", "C"]
 
 
-/* El objeto personaje está dentro de la función personaje porque es la única forma que ${nombre} se defina después de definir nombreInput.value*/
-
 
 let main = document.querySelector(`main`)
 const personajeMain = document.createElement (`section`)
 personajeMain.classList.add(`personajeMain`)
 personajeMain.classList.add(`ocultarPersonaje`)
 main.append(personajeMain)
+
+
 
 function personaje (){
 
@@ -175,12 +175,16 @@ btnEnviar.addEventListener("click", (e) => {
 });
 
 
+//Ranking
+
+
+
 /* Array de pregunta de funciomes */
 let btnA
 let btnB
 let btnC
 
-const arrayPregunta =[
+/* const arrayPregunta =[
     {numero: 1,
     pregunta: "¿Qué es un antígeno?", 
     opcionA: "a) Un microorganismo",
@@ -343,7 +347,7 @@ const arrayPregunta =[
     repuesta: "a"
     }
 
-]
+] */
 
 
 
@@ -354,9 +358,84 @@ let preguntaSection = document.createElement (`section`);
 preguntaSection.innerHTML =`<section id="preguntaSection" class="preguntaSection"> </section>`
 main.appendChild(preguntaSection)
 
+let objetoDatos
 
-async function preguntar (){
 
+function ranking (){
+    let listaJugadores = []
+
+    let datosRecuperados = localStorage.getItem(`datosPartida`)
+    
+   if (datosRecuperados) {
+        listaJugadores = JSON.parse(datosRecuperados) 
+    }
+
+    objetoDatos = {
+        jugador: nombre,
+        puntaje: puntos
+    }
+
+    listaJugadores.push(objetoDatos)
+
+    localStorage.setItem(`datosPartida`, JSON.stringify(listaJugadores))
+
+    let divRanking = document.createElement(`div`);
+    divRanking.classList.add(`ranking`);
+    divRanking.classList.add(`ocultar`)
+
+    if (listaJugadores.length > 0) {
+        let listaHTML = '<div class="lists"><ul class="nes-list is-disc"> <h1>Puntaje</h1>';
+        
+        listaJugadores.forEach((jugador) => {
+            listaHTML += `<li>${jugador.jugador} = ${jugador.puntaje}</li>`;
+        });
+
+        listaHTML += '</ul></div>';
+        divRanking.innerHTML = listaHTML;
+    }else{
+        let sinTexto = document.createElement(`div`)
+        sinTexto.classList.add(`ranking`)
+        sinTexto.innerHTML = `
+        <div class="nes-container is-rounded">
+            <p>Todavia no existe ninguna partida jugada.</p>
+        </div>
+        `
+
+        main.appendChild(sinTexto)
+    }
+
+    main.appendChild(divRanking)
+
+    let divBtnRanking = document.createElement(`div`)
+    divBtnRanking.innerHTML = `
+    <div>
+        <button type="button" id="btnRanking" class="nes-btn is-error btnRanking">Historial Puntaje</button>
+    </div>`
+    main.appendChild(divBtnRanking)
+
+    let btnRanking = document.querySelector(`#btnRanking`)
+
+    btnRanking.addEventListener(`click`, ()=>{
+    divRanking.classList.toggle(`ocultar`)
+    preguntaSection.classList.toggle(`ocultar`)
+    })
+
+}
+
+
+let arrayPregunta
+
+function preguntar (){
+
+    fetch(`./json/preguntas.json`)
+        .then((resp)=>resp.json())
+        .then((data)=>{
+            console.log(data)
+            arrayPregunta=data
+            generarPregunta()
+        })
+
+    async function generarPregunta(){
     for (i=0; i<  arrayPregunta.length; i+=1){
         preguntaContenedor = document.createElement(`div`)
         preguntaContenedor.classList.add(`scale-in-hor-center`)
@@ -390,6 +469,7 @@ async function preguntar (){
          btnC.addEventListener(`click`, () => { 
             funcionDialogo("c");
          })
+         
          
         await esperarFuncion();
         function esperarFuncion() {
@@ -446,43 +526,58 @@ async function preguntar (){
 
         if (numPreg == arrayPregunta.length) {
             if (puntos <= 15) {
+
                 let divFinal15 = document.createElement('div');
                 divFinal15.innerHTML = `
-                    <div class="nes-container is-rounded">
+                    <div class="nes-container is-rounded textoFinal">
                         <p>${nombre}, has fallecido durante el intento. Vuelve a intentarlo! Respondiste bien solamente el ${(puntos * 100) / 60}% de las preguntas</p>
                     </div>`;
                 preguntaSection.appendChild(divFinal15);
+                ranking()
+                
             } else if (puntos > 15 && puntos <= 30) {
+
                 let divFinal30 = document.createElement('div');
                 divFinal30.innerHTML = `
-                    <div class="nes-container is-rounded">
+                    <div class="nes-container is-rounded textoFinal">
                         <p>${nombre} has hecho lo más que pudiste, lamentablemente no alcanzó. Pero se valora el esfuerzo! Lograste un ${(puntos * 100) / 60}% de respuestas correctas!</p>
                     </div>`;
                 preguntaSection.appendChild(divFinal30);
+                ranking()
+
             } else if (puntos > 30 && puntos <= 45) {
+
                 let divFinal45 = document.createElement('div');
                 divFinal45.innerHTML = `
-                    <div class="nes-container is-rounded">
+                    <div class="nes-container is-rounded textoFinal">
                         <p>${nombre} Has logrado encontrar la vacuna y salvar muchas vidas! La sociedad está en deuda contigo. ¡Felicidades! Lograste un ${(puntos * 100) / 60}% de respuestas correctas!</p>
                     </div>`;
                 preguntaSection.appendChild(divFinal45);
+                ranking()
+
             } else if (puntos > 45 && puntos < 60) {
+
                 let divFinal59 = document.createElement('div');
                 divFinal59.innerHTML = `
-                    <div class="nes-container is-rounded">
+                    <div class="nes-container is-rounded textoFinal">
                         <p>${nombre} Lograste un ${(puntos * 100) / 60}% de respuestas correctas, casi un puntaje perfecto! No solo encontraste la vacuna, sino que fuiste premiado con varios premios. ¡Gran trabajo!</p>
                     </div>`;
                 preguntaSection.appendChild(divFinal59);
+                ranking()
+
             } else if (puntos == 60) {
+
                 let divFinal60 = document.createElement('div');
                 divFinal60.innerHTML = `
-                    <div class="nes-container is-rounded">
+                    <div class="nes-container is-rounded textoFinal">
                         <p>${nombre} Lograste un ${(puntos * 100) / 60}% de respuestas correctas, un puntaje perfecto! No solo encontraste la vacuna, sino que tu trabajo fue el ganador del premio Nobel.</p>
                     </div>`;
                 preguntaSection.appendChild(divFinal60);
+                ranking()
             }
         }
     }
+}
 }
 
 

@@ -10,6 +10,10 @@ main{
     background-color: #9FA2B2;
 }
 
+.bienvenida{
+    background-color:#DBC2CF
+}
+
 .personajeMain{
     display: flex;
     justify-content: space-between;
@@ -25,7 +29,7 @@ main{
         display: flex;
         flex-direction: column;
         margin-right: 10px;
-        background-color: #a6a5a5;
+        background-color:  #bda8b3f6;
         font-size: 0.8rem;
         border: 5px solid black;
         border-radius: 5px;
@@ -39,6 +43,7 @@ main{
 
         &:hover{
             transform: scale(1.1);
+            background-color:#DBC2CF ;
         }
     }
     
@@ -99,4 +104,8 @@ main{
         height: 50px;
         width: 50px;
     }
+}
+
+.textoFinal{
+    background-color:  #DBC2CF ;
 }
